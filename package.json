@@ -4,7 +4,9 @@
   "description": "Javascript wrapper around Adobe's Extension Manager command line tool",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "unzip_mac": "unzip -o bin/ExManCmd_mac.zip -d bin/ExManCmd_mac/",
+    "unzip_win": "unzip -o bin/ExManCmd_win.zip -d bin/ExManCmd_win/",
+    "postinstall": "npm run unzip_mac && npm run unzip_win"
   },
   "repository": {
     "type": "git",

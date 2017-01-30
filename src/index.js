@@ -3,15 +3,15 @@ var path = require('path');
 var spawn = require('child_process').spawn;
 
 var EXECUTABLES = {
-    ['darwin']: path.join(__dirname, '..', 'bin/ExManCmd_mac/Contents/MacOS/ExManCmd'),
-    ['win32']: path.join(__dirname, '..', 'bin/ExManCmd_win/ExManCmd.exe'),
-    ['win64']: path.join(__dirname, '..', 'bin/ExManCmd_win/ExManCmd.exe'),
+    darwin: path.join(__dirname, '..', 'bin/ExManCmd_mac/Contents/MacOS/ExManCmd'),
+    win32: path.join(__dirname, '..', 'bin/ExManCmd_win/ExManCmd.exe'),
+    win64: path.join(__dirname, '..', 'bin/ExManCmd_win/ExManCmd.exe'),
 };
 
 var COMMAND_PREFIXES = {
-    ['darwin']: '--',
-    ['win32']: '/',
-    ['win64']: '/',
+    darwin: '--',
+    win32: '/',
+    win64: '/',
 };
 
 var ARGUMENT_HELP = {

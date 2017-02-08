@@ -42,7 +42,9 @@ var exManCommand = function(command) {
                 return reject('The "' + command + '" command requires the first argument to be ' + ARGUMENT_HELP[command]);
             }
 
-            var commandProcess = spawn(EXECUTABLES[platform], [COMMAND_PREFIXES[platform] + command, argument]);
+            var executable = EXECUTABLES[platform];
+            var args = [COMMAND_PREFIXES[platform] + command, argument];
+            var commandProcess = spawn(executable, args);
 
             commandProcess.stdout.on('data', reject);
             commandProcess.stderr.on('data', reject);
@@ -55,6 +57,8 @@ var exManCommand = function(command) {
 
                 resolve(code);
             });
+
+            commandProcess.on('error', reject);
         });
     };
 };

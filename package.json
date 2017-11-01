@@ -1,6 +1,6 @@
 {
   "name": "exman",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript wrapper around Adobe's Extension Manager command line tool",
   "main": "src/index.js",
   "scripts": {

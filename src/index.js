@@ -54,7 +54,6 @@ var exManCommand = function(command) {
 
             var commandProcess = spawn(executable, args);
 
-            commandProcess.stdout.on('data', reject);
             commandProcess.stderr.on('data', reject);
 
             commandProcess.on('exit', function(code) {
